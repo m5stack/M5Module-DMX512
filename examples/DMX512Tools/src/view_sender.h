@@ -308,7 +308,7 @@ class view_sender_t : public view_t {
                             TFT_DARKGRAY);
         M5.Display.pushImage(scroll_width + 8, 120, logo_sender_width,
                              logo_sender_height,
-                             (const m5gfx::rgb565_t*)logo_sender);
+                             (const m5gfx::swap565_t*)logo_sender);
     }
 
     void drawUIValueUpDown(int sign = 0) {
