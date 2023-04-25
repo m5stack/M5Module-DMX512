@@ -57,7 +57,7 @@
 ![image_1](images/image_1.jpg)
 
 ### disassembly method
-<div><video controls src="./images/disassembly.mp4" muted="false"></video></div>
+<div><video controls src="https://user-images.githubusercontent.com/42724151/234217553-ae37cacd-316a-4df9-acec-f7d605136cc1.mp4" muted="false"></video></div>
 
 ---
 There is currently no official M5Stack library for the DMX512 module.<br>
