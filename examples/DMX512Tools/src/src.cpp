@@ -13,7 +13,7 @@ enum scene_mode_t {
 
 static scene_mode_t scene_mode = mode_select;
 static ui_button_t btns[2]     = {{0, 200, 120, 40, "Receiver"},
-                              {200, 200, 120, 40, "Sender"}};
+                                  {200, 200, 120, 40, "Sender"}};
 static view_receiver_t view_receiver;
 static view_sender_t view_sender;
 
@@ -41,15 +41,15 @@ void setup(void) {
     dmx_config_t dmxConfig = DMX_DEFAULT_CONFIG;
     dmx_param_config(dmxPort, &dmxConfig);
 
-    /// For M5Stack Core2/Tough pin setting: TX:2  RX:19  EN:27
-    gpio_num_t transmitPin = GPIO_NUM_2;
-    gpio_num_t receivePin  = GPIO_NUM_19;
+    /// For M5Stack Core2/Tough pin setting: TX:19  RX:35  EN:27
+    gpio_num_t transmitPin = GPIO_NUM_19;
+    gpio_num_t receivePin  = GPIO_NUM_35;
     gpio_num_t enablePin   = GPIO_NUM_27;
 
     if (M5.getBoard() == m5::board_t::board_M5Stack) {
-        /// M5Stack(BASIC/GRAY/GO/FIRE) pin setting: TX:15  RX:13  EN:12
-        transmitPin = GPIO_NUM_15;
-        receivePin  = GPIO_NUM_13;
+        /// M5Stack(BASIC/GRAY/GO/FIRE) pin setting: TX:13  RX:35  EN:12
+        transmitPin = GPIO_NUM_13;
+        receivePin  = GPIO_NUM_35;
         enablePin   = GPIO_NUM_12;
     }
     dmx_set_pin(dmxPort, transmitPin, receivePin, enablePin);

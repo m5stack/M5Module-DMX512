@@ -8,11 +8,11 @@
 ---
 ### pin map
 
-|    |Core1 |Core2 |CoreS3|
-|:--:|:----:|:----:|:----:|
-| TX |  13  |  19  |   7  |
-| RX |  35  |  35  |  10  |
-| EN |  12  |  27  |   6  |
+|       | Core1 | Core2 | CoreS3 |
+| :---: | :---: | :---: | :----: |
+|  TX   |  13   |  19   |   7    |
+|  RX   |  35   |  35   |   10   |
+|  EN   |  12   |  27   |   6    |
 
 ※ Core1 : BASIC / GRAY / GO / FIRE  
 ※ Core2 : Core2 / Core2AWS / TOUGH  
@@ -61,10 +61,11 @@
 
 ---
 There is currently no official M5Stack library for the DMX512 module.<br>
-We recommend using the [esp_dmx](https://github.com/someweisguy/esp_dmx) library.
+We recommend using the [esp_dmx v2.0.2](https://github.com/someweisguy/esp_dmx/archive/refs/tags/v2.02.zip) library.
 
-[someweisguy/esp_dmx](https://github.com/someweisguy/esp_dmx)
+[someweisguy/esp_dmx](https://github.com/someweisguy/esp_dmx/tree/v2.02)
 
 ### sample application.
  - [DMX512Tools](examples/DMX512Tools/)
 
+s
