@@ -46,7 +46,15 @@ void setup(void) {
     gpio_num_t receivePin  = GPIO_NUM_35;
     gpio_num_t enablePin   = GPIO_NUM_27;
 
-    if (M5.getBoard() == m5::board_t::board_M5Stack) {
+    /// M5Unifiedの実行環境チェックを利用し、CoreS3,旧Coreでの動作の場合はピン設定を変更する。
+    if (M5.getBoard() == m5::board_t::board_M5StackCoreS3
+     || M5.getBoard() == m5::board_t::board_M5StackCoreS3SE) {
+        /// M5Stack CoreS3 pin setting: TX:7  RX:10  EN:6
+        transmitPin = GPIO_NUM_7;
+        receivePin  = GPIO_NUM_10;
+        enablePin   = GPIO_NUM_6;
+    }
+    else if (M5.getBoard() == m5::board_t::board_M5Stack) {
         /// M5Stack(BASIC/GRAY/GO/FIRE) pin setting: TX:13  RX:35  EN:12
         transmitPin = GPIO_NUM_13;
         receivePin  = GPIO_NUM_35;

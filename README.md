@@ -68,4 +68,3 @@ We recommend using the [esp_dmx v2.0.2](https://github.com/someweisguy/esp_dmx/a
 ### sample application.
  - [DMX512Tools](examples/DMX512Tools/)
 
-s
